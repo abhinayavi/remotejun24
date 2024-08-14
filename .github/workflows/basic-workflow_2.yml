@@ -1,10 +1,13 @@
 name: Github Actions Demo2
 run-name: Testing my Github Action Demo2
 
+env:
+  owner_name: "Abhinay"
+
 on: [push]
 jobs:
   basic-workflow:
     runs-on: ubuntu-latest
     steps:
       - run: echo "my Github Action Workflow is working:"
-      - run: ls -l
+      - run: echo "owner is $owner_name"
